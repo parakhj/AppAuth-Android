@@ -168,7 +168,7 @@ public class TokenActivity extends AppCompatActivity {
         TokenRequest ropcRequest = new TokenRequest.Builder(
             authServiceConfig,
             config.getClientId())
-            .setGrantType("Password")
+            .setGrantType(TokenRequest.GRANT_TYPE_PASSWORD)
             .setRedirectUri(config.getRedirectUri())
             .setScope(config.getScope())
             .setAdditionalParameters(params)
