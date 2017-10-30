@@ -156,8 +156,7 @@ public class TokenActivity extends AppCompatActivity {
     private void callROPC() {
         displayLoading("Calling ROPC");
 
-        AuthStateManager authStateManager = AuthStateManager.getInstance(this);
-        AuthorizationServiceConfiguration authServiceConfig = authStateManager.getCurrent().getAuthorizationServiceConfiguration();
+        AuthorizationServiceConfiguration authServiceConfig = mStateManager.getCurrent().getAuthorizationServiceConfiguration();
 
         LinkedHashMap<String, String> params = new LinkedHashMap<String, String>();
         params.put("username", "demob2cuser@outlook.com");
